@@ -1,6 +1,7 @@
 package com.sinmn.core.utils.vo;
 
 import java.io.Serializable;
+import java.util.Map;
 
 import com.sinmn.core.utils.util.BeanUtil;
 import com.sinmn.core.utils.util.FastJsonUtils;
@@ -29,6 +30,14 @@ public class BaseBean implements Serializable {
 	 */
 	public String toJsonString(){
 		return FastJsonUtils.toJsonString(this);
+	}
+	
+	/**
+	 * @deception 转换为map
+	 * @return
+	 */
+	public Map<String,Object> toMap(){
+		return FastJsonUtils.getMap(this);
 	}
 
 }

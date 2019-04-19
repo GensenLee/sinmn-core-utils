@@ -142,8 +142,8 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	public static boolean isEmpty(String str) {
-		return str == null || str.length() == 0;
+	public static boolean isEmpty(Object str) {
+		return str == null || str.toString().length() == 0;
 	}
 
 	/**
@@ -179,8 +179,8 @@ public class StringUtil {
 	 * @param str
 	 * @return
 	 */
-	public static boolean isNotEmpty(String str) {
-		return str != null && str.length() > 0;
+	public static boolean isNotEmpty(Object str) {
+		return !isEmpty(str);
 	}
 
 	/**
