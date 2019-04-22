@@ -605,6 +605,24 @@ public class DateUtil {
 		c.add(Calendar.DATE, days);
 		return c.getTime();
 	}
+
+	public static float compareHours(Date date1, Date date2){
+        long nd = 1000 * 24 * 60 * 60;
+        long nh = 1000 * 60 * 60;
+        long nm = 1000 * 60;
+        // long ns = 1000;
+        // 获得两个时间的毫秒时间差异
+        long diff = date1.getTime() - date2.getTime();
+        // 计算差多少天
+        long day = diff / nd;
+        // 计算差多少小时
+        long hour = diff % nd / nh;
+        // 计算差多少分钟
+        long min = diff % nd % nh / nm;
+        // 计算差多少秒//输出结果
+        // long sec = diff % nd % nh % nm / ns;
+        return day * 24 + hour + Float.valueOf(min)/60;
+    }
 	
 	public static void main(String[] args){
 //		long ms = 31 * 24 * 60 * 60;
@@ -615,10 +633,14 @@ public class DateUtil {
 //		int n = (int) expireTime;
 //		System.out.println(expireTime);
 //		System.out.println(n);
-		Date date = new Date();
-		System.out.println(date.getTime());
-		Date date2 = addMinutes(date, -1);
-		System.out.println(date.getTime());
-		System.out.println(date2.getTime());
-	}
+//		Date date = new Date();
+//		System.out.println(date.getTime());
+//		Date date2 = addMinutes(date, -1);
+//		System.out.println(date.getTime());
+//		System.out.println(date2.getTime());
+        System.out.println(compareHours(new Date(), addMinutes(addHours(addDays(new Date(),1),5),23)));
+//        System.out.println(getDatePoor(new Date(), addDays(new Date(), 10)));
+
+    }
+
 }
