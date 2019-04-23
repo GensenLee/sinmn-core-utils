@@ -51,11 +51,11 @@ public class EmailUtil{
 //		data.put("email", "linrs@sinmn.com");
 //		data.put("url", "ww.baidu.com");
 //		data.put("content", "测试的内容");
-//		String content="fdsakljfjklasdfjl";
-//		send("ligz@sinmn.com", "bug提醒", content);
+		String content="fdsakljfjklasdfjl";
+		send("ligz@sinmn.com", "bug提醒", content);
 
 
-        System.out.println(UUID.randomUUID().toString().replaceAll("-",""));
+//        System.out.println(UUID.randomUUID().toString().replaceAll("-",""));
 
     }
 
