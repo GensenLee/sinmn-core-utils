@@ -46,13 +46,12 @@ public class EmailUtil{
 		EmailHostVO emailHostVO = new EmailHostVO("smtp.163.com", "sinmn_test@163.com", "sinmn888", "sinmn test-新月测试");
 		setVO(emailHostVO);
 		//send("linrs@sinmn.com", "测试", "有按钮吗", "www.baidu.com");
-//
 //		Map<String, Object> data=new HashMap<String, Object>();
 //		data.put("email", "linrs@sinmn.com");
 //		data.put("url", "ww.baidu.com");
 //		data.put("content", "测试的内容");
 		String content="fdsakljfjklasdfjl";
-		send("ligz@sinmn.com", "bug提醒", content);
+		send("gz.lee@castlers.com", "bug提醒", content);
 
 
 //        System.out.println(UUID.randomUUID().toString().replaceAll("-",""));
