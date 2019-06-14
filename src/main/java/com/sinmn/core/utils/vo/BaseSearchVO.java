@@ -62,6 +62,7 @@ public class BaseSearchVO extends BaseBean {
 	}
 	public void setSize(int size) {
 		this.size = size;
+		this.displayRecord = size;
 	}
 	public int getPage() {
 		return page;
